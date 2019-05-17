@@ -1,0 +1,17 @@
+<form [formGroup]="loginForm">
+  <h3>Login</h3>
+  Username: <input type="text" formControlName="username" placeholder="Username">
+  <br />
+  Password: <input type="password" formControlName="password" placeholder="Password">
+</form>
+
+<form [formGroup]="registerForm">
+  <h3>Register</h3>
+  Email: <input type="text" formControlName="email" placeholder="email">
+  <br />
+  Username: <input type="text" formControlName="username" placeholder="Username">
+  <br />
+  Password: <input type="password" formControlName="password" placeholder="Password">
+  <br />
+  Confirm Password: <input type="password" formControlName="cPassword" placeholder="Confirm Password">
+</form>

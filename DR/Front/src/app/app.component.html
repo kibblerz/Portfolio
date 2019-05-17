@@ -1,0 +1,21 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+
+<div class="container" fxFlexLayout="column">
+<mat-toolbar class="mat-elevation-z20 primary topBar"><mat-icon (click)="sidenav.toggle()">menu</mat-icon><div>David Russ: Web Developer</div></mat-toolbar>
+<mat-sidenav-container  class="example-container">
+    <mat-sidenav #sidenav mode="over" [(opened)] = "opened">
+      <mat-nav-list>
+        <mat-list-item routerLink="index">Home</mat-list-item>
+        <mat-list-item routerLink="works">My Work</mat-list-item>
+        <mat-list-item routerLink="contact">Contact Me</mat-list-item>
+        <mat-list-item routerLink="social">Social Media</mat-list-item>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-card class="mat-elevation-z5 content">
+      <router-outlet></router-outlet>
+      </mat-card>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+</div>

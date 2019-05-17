@@ -1,0 +1,17 @@
+<!--This is the contact component-->
+<mat-card-title>Contact me about a job</mat-card-title>
+<form fxLayout="column" method="POST" [formGroup]="form" (ngSubmit)="sendmail(form.value)">
+
+    <mat-form-field>
+        <input matInput name="email" placeholder="Email" [formControl]="email" required>
+        <mat-error *ngIf = "email.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+    <br />
+    <mat-form-field>
+        <textarea matInput class="textarea" name="message" [formControl]="message" placeholder="What is it you need done?" required></textarea>
+        <mat-error *ngIf = "message.invalid">{{getErrorMessage2()}}</mat-error>
+    </mat-form-field>
+    <br />
+            <button mat-button value="send" type="submit">submit</button>
+    
+    </form>

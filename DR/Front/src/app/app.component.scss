@@ -1,0 +1,28 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$primary: mat-palette($mat-teal);
+$accent: mat-palette($mat-teal, A100, A200, A400);
+$theme: mat-dark-theme($primary, $accent);
+@include angular-material-theme($theme);
+@mixin main-theme($theme){
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+
+    .primary {
+        background-color: mat-color($primary);
+    }
+    .example-container {
+        background-color: mat-color($accent);
+    }
+    .content{
+        background-color: white;
+        color: mat-color($accent, 500);
+    }
+    .topBar {
+        display: flex;
+ //       justify-content: space-between;
+    }
+}
+@include main-theme($theme);
